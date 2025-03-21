@@ -1,0 +1,210 @@
+:root{
+    --primary-color: rgb(0, 148, 7, 0.800);
+    --primary-color-active: rgba(0, 148, 7, 0.300);
+    --primary-color-focus: rgba(0, 148, 7, 0.600);
+
+    --br-1: 10px;
+    --br-2: 15px;
+    --br-3: 20px;
+    --br-circle: 50%;
+
+    --fs-small:10pt;
+    --fs-normal:12pt;
+    --fs-medium:14pt;
+    --fs-big:16pt;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    transition: transform .5s, box-shadow .5s;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    background-image: url(../images/bg-login.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+}
+
+
+
+.container {
+    background: rgba(255, 255, 255, 0.800);
+    box-shadow:0px 0px 15px 0px rgba(255, 255, 255, 0.300) ;
+    backdrop-filter: blur(20px);
+     
+    -webkit-backdrop-filter: blur(10px);
+    
+
+    height: 90vh;
+    width: 30vw;
+    margin-right: 2%;
+    border-radius: var(--br-1);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.login{
+    width: 85%;
+    height: 90%;
+    display: flex;
+    flex-direction:column;
+    align-self: center;
+    
+}
+
+.logo{
+    background-image: url(../images/modelo-logo.png);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    width: 100px;
+    height: 100px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+
+}
+
+.input-box{
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+
+}
+
+input{
+    border: none;
+    border-radius: var(--br-1);
+    padding: 1rem;
+    width: 100%;
+}
+
+input::placeholder{
+    font-size: var(--fs-small);
+    
+}
+
+input:focus {
+    box-shadow: 0 0 2px 3px var(--primary-color-focus);
+    border: 0 none;
+    outline: 0;
+} 
+
+.send{
+    width: 100%;
+    margin-top: .5rem;
+}
+
+.button{
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: var(--br-1);
+    font-weight: 500;
+    font-size: var(--fs-normal);
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+.button:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px 2px var(--primary-color-active);
+}
+
+.button:active{
+    background-color: var(--primary-color-active);
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.separator::before,
+.separator::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #000000;
+    margin: 0 25px;
+}
+
+.separator span {
+    font-size: var(--fs-normal);
+    color: #000000;
+}
+
+/* Estilização do botão do Google */
+.google-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: var(--br-1);
+    font-size: var(--fs-small);
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.google-btn:hover {
+    background-color: #f0f0f0;
+}
+
+@media (max-width: 575px) {
+    body{
+        justify-content: center;
+    }
+
+    .container{
+        margin-right: 0;
+        width: 95vw;
+    }
+}
+
+@media (min-width: 576px) {
+
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1400px) {
+}
