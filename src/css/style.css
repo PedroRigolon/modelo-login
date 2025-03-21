@@ -126,6 +126,22 @@ body {
     background-color: #f0f0f0;
 }
 
+.register-text {
+    margin: 10px 0 5px 0;
+    text-align: center;
+    font-size: var(--fs-small);
+}
+
+.register-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.register-link:hover {
+    text-decoration: underline;
+}
+
 
 
 
@@ -184,6 +200,39 @@ input:focus {
     outline: 0;
 } 
 
+.input-title{
+    display: flex;
+    flex-direction: row;
+    gap: .75rem;
+    
+}
+
+.input-title p{
+    font-weight: 500;
+}
+
+.password-container {
+    position: relative;
+    width: 100%;
+}
+
+.password-container input {
+    width: 100%;
+}
+
+.password-container i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #555;
+}
+
+.password-container i:hover {
+    color: var(--primary-color);
+}
+
 .send{
     width: 100%;
     margin-top: .5rem;
@@ -201,7 +250,8 @@ input:focus {
 
     .container{
         margin-right: 0;
-        min-width: 95vw;
+        border-radius: 0;
+        min-width: 100vw;
     }
 }
 
