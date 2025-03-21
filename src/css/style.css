@@ -1,12 +1,13 @@
+/* geral */
 :root{
-    --primary-color: rgb(0, 148, 7, 0.800);
-    --primary-color-active: rgba(0, 148, 7, 0.300);
-    --primary-color-focus: rgba(0, 148, 7, 0.600);
+    --primary-color: rgba(8, 125, 54, 0.8);
+    --primary-color-active: rgba(8, 125, 54, 0.300);
+    --primary-color-focus: rgba(8, 125, 54, 0.600);
 
     --br-1: 10px;
     --br-2: 15px;
     --br-3: 20px;
-    --br-circle: 50%;
+    --br-circle: 50%;   
 
     --fs-small:10pt;
     --fs-normal:12pt;
@@ -41,11 +42,8 @@ body {
 
 
 .container {
-    background: rgba(255, 255, 255, 0.800);
+    background: rgba(255, 255, 255, 0.815);
     box-shadow:0px 0px 15px 0px rgba(255, 255, 255, 0.300) ;
-    backdrop-filter: blur(20px);
-     
-    -webkit-backdrop-filter: blur(10px);
     
 
     min-height: 90vh;
@@ -59,6 +57,79 @@ body {
     justify-content: center;
 
 }
+
+
+.button{
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: var(--br-1);
+    font-weight: 500;
+    font-size: var(--fs-normal);
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+.button:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px 2px var(--primary-color-active);
+}
+
+.button:active{
+    background-color: var(--primary-color-active);
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.separator::before,
+.separator::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #000000;
+    margin: 0 25px;
+}
+
+.separator span {
+    font-size: var(--fs-normal);
+    color: #000000;
+}
+
+
+
+/* botão do Google */
+
+.google-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: var(--br-1);
+    font-size: var(--fs-small);
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.google-btn:hover {
+    background-color: #f0f0f0;
+}
+
+
+
+
+/* formulario LOGIN */
 
 .login{
     width: 85%;
@@ -118,69 +189,10 @@ input:focus {
     margin-top: .5rem;
 }
 
-.button{
-    width: 100%;
-    padding: 1rem;
-    border: none;
-    border-radius: var(--br-1);
-    font-weight: 500;
-    font-size: var(--fs-normal);
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
-    color: white;
-}
 
-.button:hover{
-    cursor: pointer;
-    transform: scale(1.05);
-    box-shadow: 0px 0px 10px 2px var(--primary-color-active);
-}
 
-.button:active{
-    background-color: var(--primary-color-active);
-}
 
-.separator {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    margin: 20px 0;
-}
-
-.separator::before,
-.separator::after {
-    content: "";
-    flex: 1;
-    border-bottom: 1px solid #000000;
-    margin: 0 25px;
-}
-
-.separator span {
-    font-size: var(--fs-normal);
-    color: #000000;
-}
-
-/* Estilização do botão do Google */
-.google-btn {
-    width: 100%;
-    padding: 10px;
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: var(--br-1);
-    font-size: var(--fs-small);
-    font-weight: normal;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.google-btn:hover {
-    background-color: #f0f0f0;
-}
+/* responsividade width */
 
 @media (max-width: 575px) {
     body{
@@ -194,17 +206,66 @@ input:focus {
 }
 
 @media (min-width: 576px) {
+    body{
+        justify-content: center;
+    }
 
+    .container{
+        margin-right: 0;
+        min-width: 85vw;
+    }
 }
 
 @media (min-width: 768px) {
+
+    body{
+        justify-content: center;
+    }
+
+    .container{
+        margin-right: 0;
+        min-width: 75vw;
+    }
 }
 
+
 @media (min-width: 992px) {
+
+    body{
+        justify-content: center;
+    }
+
+    .container{
+        margin-right: 0;
+        min-width: 55vw;
+    }
 }
 
 @media (min-width: 1200px) {
+
+    body{
+        justify-content: right;
+    }
+
+    .container{
+        margin-right: 2%;
+        min-width: 30vw;
+    }
 }
 
-@media (min-width: 1400px) {
+/* responsividade height */
+
+@media (min-height: 1000px) {
+
+    .container{
+        min-height: 75vh;
+    }
 }
+
+@media (min-height: 1300px) {
+
+    .container{
+        min-height: 50vh;
+    }
+}
+
