@@ -48,8 +48,8 @@ body {
     -webkit-backdrop-filter: blur(10px);
     
 
-    height: 90vh;
-    width: 30vw;
+    min-height: 90vh;
+    min-width: 30vw;
     margin-right: 2%;
     border-radius: var(--br-1);
 
@@ -189,7 +189,7 @@ input:focus {
 
     .container{
         margin-right: 0;
-        width: 95vw;
+        min-width: 95vw;
     }
 }
 
