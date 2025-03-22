@@ -246,6 +246,7 @@ input:focus {
 @media (max-width: 575px) {
     body{
         justify-content: center;
+        
     }
 
     .container{
@@ -283,6 +284,7 @@ input:focus {
 
     body{
         justify-content: center;
+        background-position:right;
     }
 
     .container{
